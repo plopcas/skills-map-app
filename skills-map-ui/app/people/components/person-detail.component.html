@@ -1,0 +1,29 @@
+<div *ngIf="profile">
+	<h2>{{profile.name}} details!</h2>
+	<div>
+		<label>id: </label>{{profile.id}}
+	</div>
+	<div>
+		<label>name: </label> <input [(ngModel)]="profile.name"
+			placeholder="name" />
+	</div>
+	<div>
+		<ul class="product-experiences">
+			<li *ngFor="#prodexp of profile.productExperiences">
+				<span class="badge">{{prodexp.productId}}:{{prodexp.productName}}</span>
+				<span class="badge">{{prodexp.year}}</span>
+				<span class="badge">{{prodexp.rating}}</span>
+			</li>
+		</ul>
+	</div>
+	<div>
+		<ul class="technology-experiences">
+			<li *ngFor="#techexp of profile.technologyExperiences">
+				<span class="badge">{{techexp.technologyId}}:{{techexp.technologyName}}</span>
+				<span class="badge">{{techexp.year}}</span>
+				<span class="badge">{{techexp.rating}}</span>
+			</li>
+		</ul>
+	</div>
+	<button (click)="goBack()">Back</button>
+</div>

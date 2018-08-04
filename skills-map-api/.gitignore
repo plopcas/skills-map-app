@@ -1,0 +1,11 @@
+.gradle/
+.settings/
+.vagrant/
+bin/
+build/
+logs/
+gradle/
+.project
+.classpath
+gradlew
+gradlew.bat
